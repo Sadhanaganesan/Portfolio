@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #fff7e6, #ffe8cc); /* Light beige background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header with Gradient Background */
+header {
+    text-align: center;
+    padding: 2em;
+    background: linear-gradient(135deg, #86d1f4bd, #da83aa); /* Orange to coral gradient */
+    color: #fff;
+    animation: fadeIn 1s ease-in;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    font-style: italic;
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* Section Styling */
+section {
+    padding: 2em;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s ease-in forwards;
+    background: #fff;
+    border-radius: 8px;
+    margin: 1em auto;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section:nth-child(even) {
+    background: #f0f9f9; /* Light teal background for alternate sections */
+    animation-delay: 0.5s;
+}
+
+#about img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 1em 0;
+    animation: fadeIn 2s ease-in;
+}
+
+/* Skills Section with Color Variations */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0.5em;
+    color: #333;
+}
+
+.skill-category ul li {
+    background: #20b2aa; /* Teal background */
+    color: #fff;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.skill-category ul li:hover {
+    background: #178b7b; /* Darker teal on hover */
+}
+
+/* Project Card Styling */
+#projects .project {
+    margin: 1em 0;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s ease-in forwards;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1em;
+    background-color: #fdf7f0; /* Light beige for project cards */
+    transition: transform 0.3s ease;
+}
+
+#projects .project:hover {
+    transform: scale(1.02);
+    background: #f7f0e6;
+}
+
+#projects ul {
+    list-style: disc;
+    margin-left: 2em;
+}
+
+/* Education Section */
+#education p {
+    margin: 0.5em 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s ease-in forwards;
+}
+
+/* Button Styling for Resume Download */
+#resume a {
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(135deg, #20b2aa, #ff50cd); /* Teal to orange gradient */
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+#resume a:hover {
+    background: linear-gradient(135deg, #ff6f61, #178b7b); /* Darker gradient on hover */
+    color: #fff;
+}
+
+/* Contact Section */
+#contact a {
+    color: #6b5b95; /* Dark purple */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#contact a:hover {
+    color: #a178a6; /* Soft lavender on hover */
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #86d1f4bd, #da83aa); /* Orange to teal gradient */
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
